@@ -14,7 +14,18 @@ datasource db {
 }
 
 model Aluno {
-  id String @id
+  id       String   @id @default(uuid())
+  name     String
+  age      String
+  adress   String?
+  start_at DateTime @default(now())
 
   @@map("alunos")
+}
+
+model Equipamento {
+  id   String @id @default(uuid())
+  name String
+
+  @@map("equipamentos")
 }
