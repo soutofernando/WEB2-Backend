@@ -11,6 +11,7 @@ app.get("/", (req: Request, res: Response) => {
 
 // Rotas para alunos
 app.get("/alunos", (req: Request, res: Response) => {
+  
     try {
         res.status(200).send("Obter todos os alunos");
     } catch (error) {
